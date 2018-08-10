@@ -4,7 +4,7 @@
 			<div class="card-head bg-info text-white text-center">{{account.time}}</div>
 			<div class="card-body row">
 				<div class="col-4 col-md-2 flex-column align-content-center justify-content-center">
-					<div class="fluid-img" :style="account.type==undefined?'background-image:none':'background-image:url(../assets/img/'+account.type+'.png);'"></div>
+					<div class="fluid-img" :style="account.type==undefined?'background-image:none;':'background-image:url('+require('../assets/img/'+account.type+'.png')+');'"></div>
 				</div>
 
 				<div v-if="showEdit[index]" class="col-8 col-md-4 offset-md-2 flex-column-center"> 
@@ -102,4 +102,17 @@
 		margin: 10px;
 		box-shadow: 0px 2px 5px gray;
 	}
+
+.fluid-img{
+	box-sizing: content-box;
+	height:0px;
+	width:50%;
+    padding-bottom: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:contain;
+}
+
 </style>

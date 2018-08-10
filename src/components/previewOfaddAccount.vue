@@ -29,7 +29,7 @@
 		watch:{
 			accountType:function(){
 				if(this.accountType!==undefined){
-					this.src= 'background-image:url(~assets/img/'+this.accountType+'.png)';
+					this.src='background-image:url('+require('../assets/img/'+this.accountType+'.png')+')';
 				}
 				else this.src= "background-image:none";
 			}

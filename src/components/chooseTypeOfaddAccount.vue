@@ -3,7 +3,7 @@
 		<span class=" card-head text-center">选择账目类型</span>
 			<ul class="card-body row" id="event-type">
 				<li class="col flex-column justify-content-center align-content-center text-center" v-for="(item,index) of typeOfEvent" @click="handleEventType(item.src,index)">
-					<div :style="'background-image:url(../assets/img/'+item.src+'.png'" :class="{border:isBorder[index]}" class="round box-fluid-img mx-auto border-trasnparent">
+					<div :style="'background-image:url('+require('../assets/img/'+item.src+'.png')+')'" :class="{border:isBorder[index]}" class="round box-fluid-img mx-auto border-trasnparent">
 					</div>
 					<br/>{{item.name}}
 				</li>
